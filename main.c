@@ -1,39 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void main(void)
+int main()
 {
-    int i;
-    int suma = 0;
-    int max;
-    int min;
-    float promedio;
+    char nombre[41];
+    char localidad[41];
 
-    for(i=0; i<10; i++)
-    {
-        int aux;
-        scanf("%d",&aux);
-        suma = suma + aux;
+    printf("Ingrese nombre: ");
+    fflush(stdin);
+    scanf("%s", nombre);
+    printf("\nIngrese localidad: ");
+    fflush(stdin);
+    scanf("%s", localidad);
 
-        if(i==0)
-        {
-            max = aux;
-            min = aux;
-        }
+    printf("\nUsted se llama %s y vive en %s.", nombre, localidad);
 
-        if(aux>max)
-        {
-            max = aux;
-        }
-
-        if(aux<min)
-        {
-            min = aux;
-        }
-    }
-    promedio = (float)suma / i;
-
-    printf("la suma es: %d\n",suma);
-    printf("El maximo es: %d\n",max);
-    printf("El minimo es: %d\n",min);
-    printf("El promedio es: %.2f\n", promedio);
+    return 0;
 }
